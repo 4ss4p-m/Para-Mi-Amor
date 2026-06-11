@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Mi Amor ❤️</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Parisienne&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Parisienne&family=Petit+Formal+Script&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:
+    radial-gradient(circle at top,#f9a8d4 0%,transparent 30%),
+    linear-gradient(-45deg,#2e1065,#4c1d95,#6d28d9,#9333ea);
+
+    background-size:400% 400%;
+    animation:fondo 15s ease infinite;
+
+    min-height:100vh;
+    overflow-x:hidden;
+
+    color:white;
+
+    font-family:'Cormorant Garamond', serif;
+}
+
+
+@keyframes fondo{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.contenedor{
+    max-width:900px;
+    margin:auto;
+    padding:50px 25px;
+    text-align:center;
+}
+
+h1{
+    font-family:'Great Vibes', cursive;
+    font-size:clamp(3rem, 8vw, 4.5rem);
+    font-weight:normal;
+    margin-bottom:20px;
+}
+
+.dedicatoria{
+    font-size:2rem;
+    color:#ffffff;
+    margin-bottom:20px;
+}
+
+.subdedicatoria{
+    margin-top:20px;
+    font-family:'Dancing Script', cursive;
+    font-size:2.3rem;
+    color:#ffd6f5;
+    text-shadow:
+        0 0 10px rgba(255,255,255,.4);
+
+}
+
+p{
+    font-size:1.45rem;
+    line-height:2;
+}
+
+#carta{
+    display:none;
+    opacity:0;
+    transition:opacity 1.5s ease;
+
+}
+
+@keyframes aparecerTexto{
+
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+
+}
+
+#textoCarta{
+    white-space:pre-line;
+    font-family:'Cormorant Garamond', serif;
+    font-size:1.6rem;
+    line-height:2;
+    animation:aparecerTexto 1s ease;
+
+}
+
+.boton{
+    margin-top:35px;
+    padding:16px 38px;
+    border:none;
+    border-radius:40px;
+    background:linear-gradient(
+    45deg,
+    #ec4899,
+    #8b5cf6
+    );
+
+    color:white;
+    font-family:'Dancing Script', cursive;
+    font-size:1.6rem;
+    font-weight:600;
+    letter-spacing:0.5px;
+    cursor:pointer;
+    transition:.4s;
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.2);
+    text-shadow:
+    0 0 8px rgba(255,255,255,.3);
+
+}
+
+.boton:hover{
+
+    transform:
+    translateY(-3px)
+    scale(1.05);
+
+    box-shadow:
+    0 15px 35px rgba(236,72,153,.35);
+
+}
+
+#carta,
+#final{
+    display:none;
+}
+
+.caja{
+
+    background:
+    linear-gradient(
+    to bottom,
+    #fffdf8,
+    #fff7ed
+    );
+
+    color:#4b2e2e;
+    border-radius:18px;
+    padding:60px;
+    margin-top:25px;
+    box-shadow:
+    0 20px 60px rgba(0,0,0,.25);
+    border:1px solid rgba(255,255,255,.4);
+    position:relative;
+
+}
+
+.caja::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:12px;
+    left:12px;
+    right:12px;
+    bottom:12px;
+
+    border:2px solid rgba(192,132,252,.6);
+
+    border-radius:15px;
+
+    box-shadow:
+    inset 0 0 15px rgba(192,132,252,.15);
+
+    pointer-events:none;
+
+}
+
+.caja::after{
+
+    content:"❀";
+
+    position:absolute;
+
+    top:25px;
+    right:30px;
+
+    font-size:2rem;
+
+    color:#c084fc;
+
+}
+
+.borde-romantico{
+
+    position:absolute;
+
+    top:15px;
+    left:15px;
+    right:15px;
+    bottom:15px;
+
+    border:2px solid rgba(192,132,252,.4);
+
+    border-radius:12px;
+
+    pointer-events:none;
+
+}
+
+.esquinaInferior{
+
+    position:absolute;
+
+    bottom:25px;
+
+    left:30px;
+
+    font-size:2rem;
+
+    color:#c084fc;
+
+}
+
+.corazon{
+    position:fixed;
+    bottom:-50px;
+    animation:subir 8s linear forwards;
+    font-size:25px;
+}
+
+@keyframes subir{
+    from{
+        transform:translateY(0);
+        opacity:1;
+    }
+    to{
+        transform:translateY(-110vh);
+        opacity:0;
+    }
+}
+
+
+#textoCarta{
+    white-space:pre-line;
+    font-family:'Dancing Script', cursive;
+    font-size:2rem;
+    line-height:2.1;
+    color:#4b2e2e;
+
+}
+@keyframes fadeCarta{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+#botonSorpresa{
+    animation:aparecer 1.5s ease;
+}
+
+@keyframes aparecer{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.adorno{
+    color:#c084fc;
+    font-size:1.4rem;
+    margin-bottom:25px;
+
+}
+
+@media (max-width: 768px){
+
+    .contenedor,
+    .caja{
+
+        width:100%;
+
+        padding:30px 20px;
+
+    }
+
+    h1{
+
+        font-size:3rem !important;
+
+    }
+
+    .dedicatoria{
+
+        font-size:1.5rem !important;
+
+    }
+
+    .subdedicatoria,
+    .subtitulo{
+
+        font-size:1.7rem !important;
+
+    }
+
+    #textoCarta,
+    .contenidoCarta,
+    .mensaje,
+    p{
+
+        font-size:1.3rem !important;
+
+        line-height:1.8 !important;
+
+    }
+
+    .boton{
+
+        width:100%;
+
+        max-width:320px;
+
+        font-size:1.5rem !important;
+
+        padding:18px 25px;
+
+    }
+
+    .qr img{
+
+        width:220px !important;
+
+    }
+
+}
+
+</style>
+
+
+
+</head>
+
+<body>
+
+<div class="contenedor">
+
+
+<div id="inicio">
+    <h1>❤️ Para Ti ❤️</h1>
+
+
+    <div class="dedicatoria">
+
+        致慧欣 ❤️
+
+        <div class="subdedicatoria">
+            Para la persona que volvió especial cada día desde aquel 7 de abril.
+    </div>
+
+</div>
+
+    <div class="caja">
+
+        <div class="esquinaInferior">❀</div>
+
+         <div class="borde-romantico"></div>
+         
+        <p>
+            Si estás leyendo esto, es porque quería encontrar una forma especial de decirte todo lo que siento por ti.
+            <br><br>
+            Hay muchas cosas que quiero decirte, y por eso prefiero escribirlas en una carta.
+        </p>
+
+        <button class="boton" onclick="abrirCarta()">
+            Abrir Carta
+        </button>
+    </div>
+</div>
+
+<div id="carta">
+
+    <h1>❤️ Para Mi amor ❤️</h1>
+
+    <p style="
+        font-size:1.1rem;
+        margin-bottom:10px;
+        color:#f8d7ff;">
+        给慧欣 ❤️
+    </p>
+
+<p id="contador"
+style="
+font-family:'Dancing Script', cursive;
+font-size:2rem;
+margin-bottom:25px;
+color:#ffd6f5;
+text-shadow:0 0 10px rgba(255,255,255,.3);">
+</p>
+
+
+
+    <div class="caja">
+        <div style="
+        font-size:1.5rem;
+        margin-bottom:25px;
+        color:#c084fc;">
+        ❀ ─────── ❤️ ─────── ❀
+    </div>
+
+    <div class="adorno">
+        ❀ ───── ❤️ ───── ❀
+    </div>
+
+        <p id="textoCarta"></p>
+
+        <p
+            id="fraseFinal"
+                style="
+                display:none;
+                margin-top:30px;
+                font-family:'Parisienne', cursive;
+                font-size:2rem;
+                color:#8b5cf6;">
+
+Todavía no he terminado de decirte todo lo que siento... ❤️
+
+</p>
+
+        <button
+            id="botonSorpresa"
+            class="boton"
+            onclick="window.location.href='admiro.html'"
+            style="display:none;">
+            Descubre algo más que quiero decirte ❤️
+        </button>
+
+
+    </div>
+
+</div>
+
+<div id="final">
+
+    <h1>❤️</h1>
+
+    <div class="caja">
+        <p>
+            Gracias por leer hasta aquí.
+            <br><br>
+            Quizás esta página termine ahora...
+            <br><br>
+            Pero espero que nuestra historia siga escribiendo muchos capítulos más.
+            <br><br>
+            Te amo muchísimo.
+        </p>
+    </div>
+
+</div>
+
+
+</div>
+
+<script>
+
+const carta = `
+
+Amorcito mío,
+Si estás leyendo esto, significa que encontraste este pequeño rincón que preparé para ti.
+A veces me cuesta encontrar las palabras correctas para decir todo lo que pienso, pero quería intentarlo de una forma diferente.
+Desde aquel 7 de abril, cuando comenzamos esta historia juntos, has pasado a ocupar un lugar muy especial en mi vida. Incluso en la distancia, has logrado acompañarme en días buenos y malos, hacerme sonreír cuando lo necesitaba y darme momentos que guardo con mucho amor.
+Me gusta recordar todas nuestras conversaciones, los momentos en que nos hemos apoyado y las pequeñas cosas que hacen que seas tú. Son esos detalles los que me hacen apreciar cada día que compartimos.
+También quería aprovechar esta carta para recordarte lo importante que eres para mí. A veces el tiempo pasa rápido y olvidamos decir ciertas cosas, pero no quería dejar pasar la oportunidad de escribirlas.
+Y aunque tu cumpleaños sea el 10 de octubre, quería que esta página existiera desde ahora como un pequeño recuerdo que puedas volver a visitar cuando quieras.
+Gracias por ser parte de mi vida, por tu paciencia, por tu compañía y por todos los momentos que hemos construido juntos desde aquel 7 de abril.
+Espero que sigamos creando muchos más recuerdos, compartiendo risas, metas, historias y todo lo que aún nos queda por vivir.
+
+Con mucho amor y cariño,
+Te amo,
+Martin ❤️
+
+`;
+
+const inicioRelacion = new Date("2026-04-07");
+const hoy = new Date();
+
+const dias =
+Math.floor(
+(hoy - inicioRelacion)/(1000*60*60*24)
+);
+
+window.onload = () => {
+
+const contador =
+document.getElementById("contador");
+
+if(contador){
+contador.innerHTML =
+`Nuestra historia comenzó hace ${dias} días ❤️`;
+}
+
+};
+
+function abrirCarta(){
+
+    document.getElementById("inicio").style.display = "none";
+
+    const cartaDiv =
+    document.getElementById("carta");
+
+    cartaDiv.style.display = "block";
+    cartaDiv.style.opacity = "1";
+
+    const texto =
+    document.getElementById("textoCarta");
+
+    texto.innerHTML = carta;
+
+    texto.style.opacity = "0";
+    texto.style.transition = "opacity 2s ease";
+
+    setTimeout(() => {
+        texto.style.opacity = "1";
+    }, 100);
+
+    setTimeout(() => {
+        document.getElementById("fraseFinal").style.display = "block";
+    }, 2000);
+
+    setTimeout(() => {
+        document.getElementById("botonSorpresa").style.display = "inline-block";
+    }, 3500);
+}
+
+function mostrarFinal(){
+
+    document.getElementById("carta").style.display="none";
+    document.getElementById("final").style.display="block";
+}
+
+setInterval(()=>{
+
+    const corazon = document.createElement("div");
+
+    corazon.className="corazon";
+    const elementos = [
+        "❤️",
+        "🌸",
+        "✨"
+    ];
+
+corazon.innerHTML =
+elementos[
+Math.floor(Math.random()*elementos.length)
+];
+
+    corazon.style.left=Math.random()*100+"vw";
+
+    document.body.appendChild(corazon);
+
+    setTimeout(()=>{
+        corazon.remove();
+    },8000);
+
+},500);
+
+</script>
+
+</body>
+</html>
