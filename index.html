@@ -47,6 +47,9 @@ body{
     margin:auto;
     padding:50px 25px;
     text-align:center;
+    padding-top: 80px;
+    position:relative;
+    z-index:10;
 }
 
 h1{
@@ -93,17 +96,6 @@ p{
     to{
         opacity:1;
     }
-
-}
-
-#textoCarta{
-    white-space:pre-line;
-    font-family:'Cormorant Garamond', serif;
-    font-size:1.6rem;
-    line-height:2;
-    animation:aparecerTexto 1s ease;
-    max-width:85%;
-    margin:auto;
 
 }
 
@@ -164,6 +156,7 @@ p{
     box-shadow:
     0 20px 60px rgba(0,0,0,.25);
     border:1px solid rgba(255,255,255,.4);
+    z-index:10;
     position:relative;
 
 }
@@ -174,10 +167,10 @@ p{
 
     position:absolute;
 
-    top:12px;
-    left:12px;
-    right:12px;
-    bottom:12px;
+    top:18px;
+    left:18px;
+    right:18px;
+    bottom:18px;
 
     border:2px solid rgba(192,132,252,.6);
 
@@ -241,6 +234,7 @@ p{
     bottom:-50px;
     animation:subir 8s linear forwards;
     font-size:25px;
+    z-index:1;
 }
 
 @keyframes subir{
@@ -261,6 +255,8 @@ p{
     font-size:2rem;
     line-height:2.1;
     color:#4b2e2e;
+    max-width:85%;
+    margin:auto;
 
 }
 @keyframes fadeCarta{
@@ -363,6 +359,35 @@ p{
         width:220px !important;
 
     }
+
+    .contenedor{
+        padding-top:120px;
+    }
+
+    .corazon{
+        opacity:0.35;
+    }
+
+    .adorno{
+        opacity:0.4;
+    }
+
+    .caja{
+        width:95%;
+        max-width:none;
+        padding:25px 20px;
+    }
+
+    .subdedicatoria{
+
+        font-size:1.6rem;
+
+        line-height:1.5;
+
+        padding:0 15px;
+
+    }
+
 
 }
 
