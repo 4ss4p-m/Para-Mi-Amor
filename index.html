@@ -292,6 +292,10 @@ p{
 
 }
 
+#inicio p{
+    font-family:'Cormorant Garamond', serif;
+}
+
 @media (max-width: 768px){
 
     #textoCarta{
@@ -321,10 +325,14 @@ p{
 
         font-size:1.9rem !important;
         line-height:1.4;
+        margin-bottom:10px;
 
     }
 
-    .subdedicatoria,
+    .subdedicatoria{
+        margin-top:8px;
+    }
+    
     .subtitulo{
 
         font-size:1.7rem !important;
@@ -364,18 +372,17 @@ p{
         padding-top:120px;
     }
 
-    .corazon{
-        opacity:0.35;
-    }
-
+    .corazon,
     .adorno{
-        opacity:0.4;
+        display:none !important;
     }
 
     .caja{
         width:95%;
         max-width:none;
         padding:25px 20px;
+        font-size:1.15rem !important;
+        line-height:1.8 !important;
     }
 
     .subdedicatoria{
@@ -386,6 +393,10 @@ p{
 
         padding:0 15px;
 
+    }
+
+    .caja::after{
+        display:none;
     }
 
 
